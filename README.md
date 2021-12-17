@@ -6,6 +6,6 @@
 [![GitHub forks](https://img.shields.io/github/forks/kiinse/SpaceStation-Bot?style=flat-square)](https://github.com/kiinse/SpaceStation-Bot/network)
 [![GitHub license](https://img.shields.io/github/license/kiinse/SpaceStation-Bot?style=flat-square)](https://github.com/kiinse/SpaceStation-Bot/blob/Release/LICENSE)
 [![GitHub stars](https://img.shields.io/github/stars/kiinse/SpaceStation-Bot?style=flat-square)](https://github.com/kiinse/SpaceStation-Bot/stargazers)
-![GitHub repo size](https://img.shields.io/github/repo-sizekiinse/SpaceStation-Bot?style=flat-square)
+![GitHub repo size](https://img.shields.io/github/repo-size/kiinse/SpaceStation-Bot?style=flat-square)
 
 Telegram бот представляющий собой игру "Space Station" по мотивам бункера.
