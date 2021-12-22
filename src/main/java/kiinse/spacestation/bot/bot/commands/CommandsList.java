@@ -20,8 +20,8 @@ public class CommandsList {
             commandMap.put("start", cmd::startButton);
             commandMap.put("домой🏠", cmd::startButton);
             commandMap.put("настройки⚙", cmd::settingsButton);
-            commandMap.put("Создать карточку игрока🆔", cmd::generatePlayerCard);
-            commandMap.put("Создать карточку апокалипсиса🆔", cmd::generateApocalypseCard);
+            commandMap.put("создатькарточкуигрока🆔", cmd::generatePlayerCard);
+            commandMap.put("создатькарточкуапокалипсиса🆔", cmd::generateApocalypseCard);
         } catch (Exception e) {
             log.warn("Произошла ошибка в инициализации команд HashMap! {}", e.getMessage());
         }
