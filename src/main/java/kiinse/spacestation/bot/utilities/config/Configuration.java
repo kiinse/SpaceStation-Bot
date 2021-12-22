@@ -16,7 +16,7 @@ public class Configuration {
     }
 
     public boolean export() {
-        return FileManager.copyFile(FileManager.accessFile("config.properties"), new File("SpaceStationFiles" + File.separator + "config.properties"));
+        return BotFileManager.copyFile(BotFileManager.accessFile("config.properties"), new File("SpaceStationFiles" + File.separator + "config.properties"));
     }
 
     public String getProperty(String key){
@@ -32,7 +32,7 @@ public class Configuration {
 
     public String getVersion(Version version){
         try {
-            var info = FileManager.accessFile("info.properties");
+            var info = BotFileManager.accessFile("info.properties");
             var property = new Properties();
             property.load(info);
             switch (version) {

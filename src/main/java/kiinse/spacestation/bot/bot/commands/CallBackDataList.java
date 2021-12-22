@@ -46,7 +46,7 @@ public class CallBackDataList {
                 bot.editMessageText(
                         chat,
                         messageID,
-                        "<b>▬▬▬▬ Успешно ▬▬▬▬</b>\n\nТеперь твой логин: " + MySQLUtils.getLogin(chat) + "\n\n",
+                        "<b>▬▬▬▬ Успешно ▬▬▬▬</b>\nТеперь твой логин: " + MySQLUtils.getLogin(chat) + "\n\n",
                         null
                 );
                 bot.sendMessage(

@@ -6,6 +6,7 @@ import kiinse.spacestation.bot.bot.factories.KeyboardsFactory;
 import kiinse.spacestation.bot.utilities.BotUtils;
 import kiinse.spacestation.bot.utilities.TextFormat;
 import kiinse.spacestation.bot.utilities.config.Configuration;
+import org.json.JSONObject;
 import org.telegram.telegrambots.meta.api.objects.Update;
 
 public class Commands {
@@ -69,9 +70,10 @@ public class Commands {
 
     public void generatePlayerCard(Update update) {
         var chat = update.getMessage().getChatId().toString();
+        JSONObject card = cards.generatePlayerCardJson();
         bot.sendMessage(
                 chat,
-                cards.formatPlayerCard(MySQLUtils.getLogin(chat), cards.generatePlayerCardJson()),
+                cards.formatPlayerCard(MySQLUtils.getLogin(chat), card),
                 null,
                 null
         );

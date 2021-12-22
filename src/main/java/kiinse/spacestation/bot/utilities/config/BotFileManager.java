@@ -8,12 +8,12 @@ import java.io.IOException;
 import java.io.InputStream;
 
 @Slf4j
-public class FileManager {
+public class BotFileManager {
 
     public static InputStream accessFile(String resource) {
-        InputStream input = FileManager.class.getResourceAsStream(File.separator + "resources" + File.separator + resource);
+        InputStream input = BotFileManager.class.getResourceAsStream(File.separator + "resources" + File.separator + resource);
         if (input == null) {
-            input = FileManager.class.getClassLoader().getResourceAsStream(resource);
+            input = BotFileManager.class.getClassLoader().getResourceAsStream(resource);
         }
         return input;
     }

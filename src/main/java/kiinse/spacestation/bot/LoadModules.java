@@ -19,6 +19,7 @@ public class LoadModules {
     private final CommandsList commandsList = new CommandsList();
     private final CallBackDataList callBackDataList = new CallBackDataList();
     private final Configuration config = new Configuration();
+    private final FileManager fileManager = new FileManager();
 
     public void loadClasses(ProgressBar progress) {
         if (config.export()) {
@@ -26,7 +27,7 @@ public class LoadModules {
             System.exit(0);
         }
         progress.step();
-        new FileManager().export();
+        fileManager.export();
         progress.step();
         MySQL.connect(
                 config.getProperty("db.host"),
