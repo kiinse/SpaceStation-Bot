@@ -16,7 +16,7 @@ public class CallBackDataHandler {
     public void callBackDataHandler(Update update) {
         var chat = update.getCallbackQuery().getMessage().getChatId().toString();
         var text = update.getCallbackQuery().getMessage().getText();
-        if (MySQLUtils.hasUserByChat(chat) && !MySQLUtils.isUnspecified(chat)) {
+        if (MySQLUtils.hasUserByChat(chat)) {
             var messageID = update.getCallbackQuery().getMessage().getMessageId();
             if (callBackDataList.hasCallBackMapValue(update.getCallbackQuery().getData())) {
                 callBackDataList.runCallBackMapFunction(update.getCallbackQuery().getData(), chat, messageID, text);
